@@ -21,8 +21,8 @@ app:
   services:
     app:
       container: app
-      port: <- $port
-      host-port: <- $port
+      port: 8080
+      host-port: 8080
       protocol: tcp
   connections:
     mongo:
