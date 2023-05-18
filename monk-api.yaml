@@ -1,4 +1,4 @@
-namespace: app-tutorial
+namespace: monk-api
 
 database:
   defines: runnable
@@ -7,11 +7,11 @@ database:
 app:
   defines: runnable
   metadata:
-    name: Monk Tutorial App Service
+    name: Monk Tutorial App Service - Fork
     icon: https://d29fhpw069ctt2.cloudfront.net/icon/image/37732/preview.svg
     description: A simple service written in Node.js that connects to a MongoDB database.
     publisher: monk.io
-    source: https://github.com/monk-io/app-tutorial
+    source: https://github.com/jpolive/monk-api
   containers:
     app:
       image: nooga/app-tutorial:latest
@@ -26,7 +26,7 @@ app:
       protocol: tcp
   connections:
     mongo:
-      runnable: app-tutorial/database
+      runnable: monk-api/database
       service: mongodb
   variables: 
     port:
@@ -38,11 +38,11 @@ app:
 stack:
   defines: process-group
   metadata:
-    name: Monk Tutorial App
+    name: Monk Tutorial App - Fork
     icon: https://d29fhpw069ctt2.cloudfront.net/icon/image/37732/preview.svg
     description: A simple app that has one service and one MongoDB database.
     publisher: monk.io
-    source: https://github.com/monk-io/app-tutorial
+    source: https://github.com/jpolive/monk-api
   runnable-list:
-    - app-tutorial/database
-    - app-tutorial/app
+    - monk-api/database
+    - monk-api/app

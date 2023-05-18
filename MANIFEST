@@ -1,2 +1,2 @@
-REPO app-tutorial
-LOAD app-tutorial.yaml
+REPO monk-api
+LOAD monk-api.yaml
